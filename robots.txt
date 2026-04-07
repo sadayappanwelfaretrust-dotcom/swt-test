@@ -1,2 +1,3 @@
 User-agent: *
 Allow: /
+Sitemap: https://sadayappanwelfaretrust-dotcom.github.io/swt-test/sitemap.xml

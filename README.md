@@ -1,5 +1,10 @@
 # Sadayappan Welfare Trust Website
 
+Public launch links:
+
+- Live site: `https://sadayappanwelfaretrust-dotcom.github.io/swt-test/`
+- Repository: `https://github.com/sadayappanwelfaretrust-dotcom/swt-test`
+
 Static bilingual website for Sadayappan Welfare Trust.
 
 ## Structure
@@ -11,7 +16,9 @@ Static bilingual website for Sadayappan Welfare Trust.
 - `contact.html` - contact and volunteer enquiry page
 - `assets/css/styles.css` - shared styles
 - `assets/js/script.js` - shared interactions
+- `assets/images/social-preview.png` - social sharing preview image
 - `robots.txt` - crawler guidance
+- `sitemap.xml` - sitemap for search engines
 
 ## Local Preview
 
