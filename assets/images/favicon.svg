@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-labelledby="title">
+  <title>Sadayappan Welfare Trust</title>
+  <defs>
+    <linearGradient id="bg" x1="0%" x2="100%" y1="0%" y2="100%">
+      <stop offset="0%" stop-color="#cf7a55" />
+      <stop offset="100%" stop-color="#17372e" />
+    </linearGradient>
+  </defs>
+  <rect width="128" height="128" rx="32" fill="url(#bg)" />
+  <circle cx="64" cy="64" r="42" fill="none" stroke="#f6ead7" stroke-opacity="0.4" stroke-width="3" />
+  <path
+    d="M79 40.5C74.8 34.9 68.6 32 61.3 32C48 32 39.4 40.4 39.4 50.8C39.4 61.3 47 66.6 58.6 70.1C67.9 72.9 72.2 75.8 72.2 81.2C72.2 87.6 67 92 58.6 92C50.3 92 43.9 88.8 38.7 82.8L32 89.6C38.8 97.2 47.8 101 58.7 101C73.6 101 82.8 92.6 82.8 80.8C82.8 69.8 75.9 64.5 63.7 60.9C54.2 58 49.9 55.3 49.9 49.7C49.9 44.2 54.7 40.9 61.7 40.9C67.8 40.9 72.5 43.2 76.8 47.8L79 40.5Z"
+    fill="#fff8ef"
+  />
+</svg>

@@ -1,33 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://sadayappanwelfaretrust-dotcom.github.io/swt-test/</loc>
-    <lastmod>2026-04-07</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
+    <loc>https://sadayappanwelfaretrust.com/</loc>
+    <lastmod>2026-04-29</lastmod>
   </url>
   <url>
-    <loc>https://sadayappanwelfaretrust-dotcom.github.io/swt-test/about.html</loc>
-    <lastmod>2026-04-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://sadayappanwelfaretrust.com/about.html</loc>
+    <lastmod>2026-04-29</lastmod>
   </url>
   <url>
-    <loc>https://sadayappanwelfaretrust-dotcom.github.io/swt-test/programs.html</loc>
-    <lastmod>2026-04-07</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <loc>https://sadayappanwelfaretrust.com/programs.html</loc>
+    <lastmod>2026-04-29</lastmod>
   </url>
   <url>
-    <loc>https://sadayappanwelfaretrust-dotcom.github.io/swt-test/donate.html</loc>
-    <lastmod>2026-04-07</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <loc>https://sadayappanwelfaretrust.com/donate.html</loc>
+    <lastmod>2026-04-29</lastmod>
   </url>
   <url>
-    <loc>https://sadayappanwelfaretrust-dotcom.github.io/swt-test/contact.html</loc>
-    <lastmod>2026-04-07</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <loc>https://sadayappanwelfaretrust.com/contact.html</loc>
+    <lastmod>2026-04-29</lastmod>
   </url>
 </urlset>

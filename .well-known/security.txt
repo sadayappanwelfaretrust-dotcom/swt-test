@@ -1,0 +1,7 @@
+Contact: mailto:ssadayap@gmail.com
+Contact: tel:+917406296649
+Canonical: https://sadayappanwelfaretrust.com/.well-known/security.txt
+Preferred-Languages: en, ta
+Expires: 2027-04-29T18:30:00.000Z
+Policy: https://sadayappanwelfaretrust.com/contact.html
+Acknowledgments: https://sadayappanwelfaretrust.com/about.html
