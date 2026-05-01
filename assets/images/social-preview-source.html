@@ -6,280 +6,285 @@
     <title>Sadayappan Welfare Trust Social Preview</title>
     <style>
       :root {
-        --cream: #f7efe2;
-        --paper: rgba(255, 251, 245, 0.92);
-        --ink: #18211d;
-        --ink-soft: #53635c;
-        --brand: #17372e;
-        --brand-soft: #2e5a4d;
-        --accent: #c56d47;
-        --gold: #d8a44d;
+        --cream: #f7f2e8;
+        --paper: rgba(255, 251, 244, 0.9);
+        --ink: #15221d;
+        --ink-soft: #5a6962;
+        --brand: #0d4038;
+        --brand-deep: #082f29;
+        --brand-soft: #2a5d53;
+        --gold: #cb9a4a;
+        --gold-soft: #f0ddb3;
+        --line: rgba(255, 255, 255, 0.12);
       }
 
       * {
         box-sizing: border-box;
       }
 
-      html {
+      html,
+      body {
         width: 1200px;
         height: 630px;
+        margin: 0;
         overflow: hidden;
-        background:
-          radial-gradient(circle at 10% 10%, rgba(216, 164, 77, 0.28), transparent 24rem),
-          radial-gradient(circle at 88% 18%, rgba(197, 109, 71, 0.24), transparent 20rem),
-          linear-gradient(180deg, #fbf6ee 0%, #f6eddc 48%, #f7efe2 100%);
       }
 
       body {
-        margin: 0;
-        width: 1200px;
-        height: 630px;
-        overflow: hidden;
-        font-family: Georgia, "Times New Roman", serif;
-        background: transparent;
-        color: var(--ink);
+        font-family: "Segoe UI", Arial, sans-serif;
+        color: #fff8ef;
+        background:
+          radial-gradient(circle at 76% 18%, rgba(203, 154, 74, 0.3), transparent 15rem),
+          radial-gradient(circle at 22% 10%, rgba(255, 247, 228, 0.08), transparent 18rem),
+          linear-gradient(135deg, #082e29 0%, #0e4138 48%, #113c35 100%);
+      }
+
+      body::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image:
+          linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+        background-size: 52px 52px;
+        mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.28), transparent 88%);
       }
 
       .frame {
         position: relative;
+        display: grid;
+        grid-template-columns: minmax(0, 1.06fr) 320px;
+        gap: 38px;
         width: 100%;
         height: 100%;
-        padding: 42px;
+        padding: 38px 50px;
       }
 
-      .frame::before {
-        content: "";
-        position: absolute;
-        inset: 22px;
-        border-radius: 36px;
-        border: 1px solid rgba(23, 55, 46, 0.08);
-        pointer-events: none;
+      .brand {
+        display: inline-flex;
+        align-items: center;
+        gap: 18px;
+        margin-bottom: 28px;
       }
 
-      .grid {
-        display: grid;
-        grid-template-columns: 1.1fr 0.9fr;
-        gap: 26px;
-        height: 100%;
-      }
-
-      .left,
-      .right {
-        position: relative;
-        border-radius: 34px;
-        overflow: hidden;
-        box-shadow: 0 24px 60px rgba(24, 34, 29, 0.12);
-      }
-
-      .left {
-        padding: 42px 42px 36px;
-        background:
-          linear-gradient(145deg, rgba(255, 255, 255, 0.88), rgba(255, 250, 244, 0.96)),
-          linear-gradient(135deg, rgba(216, 164, 77, 0.08), transparent 52%);
-      }
-
-      .left::after {
-        content: "";
-        position: absolute;
-        right: -48px;
-        bottom: -48px;
-        width: 180px;
-        height: 180px;
+      .brand-mark {
+        width: 72px;
+        height: 72px;
         border-radius: 50%;
-        background: radial-gradient(circle, rgba(197, 109, 71, 0.18), transparent 70%);
+        display: grid;
+        place-items: center;
+        background:
+          radial-gradient(circle at 30% 28%, rgba(255, 246, 223, 0.96), transparent 34%),
+          linear-gradient(135deg, var(--gold), var(--brand-deep));
+        box-shadow:
+          inset 0 1px 0 rgba(255, 255, 255, 0.32),
+          0 10px 26px rgba(9, 31, 27, 0.14);
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 42px;
+      }
+
+      .brand-copy {
+        display: grid;
+        gap: 6px;
+      }
+
+      .brand-copy strong {
+        font-size: 28px;
+        font-weight: 700;
+      }
+
+      .brand-copy span {
+        color: rgba(255, 243, 226, 0.76);
+        font-size: 16px;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
       }
 
       .eyebrow {
-        margin: 0 0 18px;
-        color: var(--brand-soft);
-        font-family: Arial, sans-serif;
+        margin: 0 0 16px;
+        color: rgba(255, 242, 218, 0.76);
         font-size: 13px;
-        font-weight: 700;
-        letter-spacing: 0.18em;
+        font-weight: 800;
+        letter-spacing: 0.26em;
         text-transform: uppercase;
       }
 
       h1 {
         margin: 0;
-        max-width: 10ch;
-        font-size: 66px;
-        line-height: 0.94;
-        letter-spacing: -0.04em;
+        max-width: 10.2ch;
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 68px;
+        line-height: 0.9;
+        letter-spacing: -0.055em;
       }
 
-      .sub {
-        margin-top: 18px;
-        max-width: 18ch;
-        color: var(--ink-soft);
-        font-family: Arial, sans-serif;
-        font-size: 20px;
-        line-height: 1.5;
+      .lead {
+        margin-top: 16px;
+        max-width: 640px;
+        color: rgba(255, 246, 231, 0.82);
+        font-size: 19px;
+        line-height: 1.42;
       }
 
-      .chips {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 12px;
-        margin-top: 28px;
-      }
-
-      .chip {
-        padding: 12px 16px;
-        border-radius: 999px;
-        border: 1px solid rgba(23, 55, 46, 0.08);
-        background: rgba(255, 255, 255, 0.82);
-        font-family: Arial, sans-serif;
-        font-size: 15px;
-        color: var(--ink-soft);
-      }
-
-      .right {
-        padding: 38px;
-        background:
-          linear-gradient(160deg, rgba(23, 55, 46, 0.98), rgba(34, 79, 67, 0.94)),
-          linear-gradient(120deg, rgba(216, 164, 77, 0.16), transparent 58%);
-        color: #fff7ef;
-      }
-
-      .right::before {
-        content: "";
-        position: absolute;
-        left: 30px;
-        top: 28px;
-        width: 176px;
-        height: 176px;
-        border-radius: 50%;
-        border: 1px solid rgba(255, 248, 240, 0.12);
-      }
-
-      .seal {
-        position: absolute;
-        left: 66px;
-        top: 62px;
-        display: grid;
-        place-items: center;
-        width: 106px;
-        height: 106px;
-        border-radius: 50%;
-        border: 1px solid rgba(255, 248, 240, 0.18);
-        background: radial-gradient(circle at top, rgba(255, 255, 255, 0.18), rgba(255, 255, 255, 0.04));
-        font-size: 24px;
-        line-height: 1.05;
-        text-align: center;
-      }
-
-      .right-copy {
-        position: relative;
-        z-index: 1;
-        padding-left: 178px;
-        padding-right: 10px;
-      }
-
-      .right h2 {
-        margin: 0;
-        max-width: 8ch;
-        font-size: 44px;
-        line-height: 0.96;
-        letter-spacing: -0.04em;
-      }
-
-      .right p {
-        margin: 18px 0 0;
-        font-family: Arial, sans-serif;
-        max-width: 19ch;
-        font-size: 18px;
-        line-height: 1.6;
-        color: rgba(255, 244, 231, 0.82);
-      }
-
-      .metrics {
-        position: absolute;
-        right: 28px;
-        bottom: 28px;
-        left: 28px;
+      .signals {
         display: grid;
         grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: 12px;
+        margin-top: 22px;
+        border-top: 1px solid var(--line);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        background: linear-gradient(90deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0));
       }
 
-      .metric {
-        padding: 14px;
-        border-radius: 18px;
-        background: rgba(255, 255, 255, 0.08);
-        border: 1px solid rgba(255, 255, 255, 0.08);
+      .signal {
+        padding: 15px 16px 14px 0;
       }
 
-      .metric strong {
+      .signal + .signal {
+        padding-left: 16px;
+        border-left: 1px solid rgba(255, 255, 255, 0.08);
+      }
+
+      .signal strong {
         display: block;
-        font-family: Arial, sans-serif;
-        font-size: 12px;
-        letter-spacing: 0.12em;
+        margin-bottom: 8px;
+        color: #fff2da;
+        font-size: 11px;
+        font-weight: 800;
+        letter-spacing: 0.18em;
         text-transform: uppercase;
-        color: rgba(255, 244, 231, 0.76);
       }
 
-      .metric span {
-        display: block;
-        margin-top: 8px;
-        font-family: Arial, sans-serif;
-        font-size: 15px;
-        line-height: 1.4;
+      .signal span {
+        color: rgba(255, 245, 228, 0.78);
+        font-size: 14px;
+        line-height: 1.38;
       }
 
-      .glow {
+      .aside {
+        position: relative;
+        display: grid;
+        align-content: center;
+        gap: 14px;
+      }
+
+      .emblem-card {
+        position: relative;
+        padding: 18px;
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        border-radius: 32px 32px 82px 32px;
+        background: linear-gradient(160deg, rgba(255, 255, 255, 0.09), rgba(255, 255, 255, 0.02));
+        box-shadow: 0 30px 80px rgba(0, 0, 0, 0.18);
+        overflow: hidden;
+      }
+
+      .emblem-card::before {
+        content: "";
         position: absolute;
-        left: 22px;
-        bottom: 22px;
-        width: 86px;
-        height: 86px;
+        inset: 12px;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 22px 22px 68px 22px;
+      }
+
+      .emblem-card img {
+        position: relative;
+        width: 86%;
+        margin: 10px auto 0;
+        display: block;
+        filter: drop-shadow(0 28px 56px rgba(0, 0, 0, 0.24));
+      }
+
+      .note {
+        margin-left: -4px;
+        padding: 14px 16px 16px;
+        border: 1px solid rgba(255, 248, 236, 0.55);
+        border-radius: 20px;
+        background: rgba(255, 249, 240, 0.96);
+        color: var(--ink);
+        box-shadow: 0 14px 32px rgba(9, 31, 27, 0.08);
+      }
+
+      .note p {
+        margin: 0 0 10px;
+        color: var(--brand-soft);
+        font-size: 12px;
+        font-weight: 800;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+      }
+
+      .note ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: grid;
+        gap: 10px;
+      }
+
+      .note li {
+        position: relative;
+        padding-left: 14px;
+        font-size: 14px;
+        line-height: 1.42;
+      }
+
+      .note li::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 7px;
+        width: 6px;
+        height: 6px;
         border-radius: 50%;
-        background: radial-gradient(circle, rgba(216, 164, 77, 0.84), transparent 72%);
+        background: var(--gold);
       }
     </style>
   </head>
   <body>
     <div class="frame">
-      <div class="grid">
-        <section class="left">
-          <p class="eyebrow">Sadayappan Welfare Trust | Tamil Nadu</p>
-          <h1>Stronger futures through human-centered service.</h1>
-          <p class="sub">
-            Education, dignity, community care, and bilingual public support.
-          </p>
-          <div class="chips">
-            <span class="chip">Education support</span>
-            <span class="chip">Community outreach</span>
-            <span class="chip">Tamil + English</span>
+      <section>
+        <div class="brand">
+          <div class="brand-mark">S</div>
+          <div class="brand-copy">
+            <strong>Sadayappan Welfare Trust</strong>
+            <span>Education, Dignity, Community Care</span>
           </div>
-        </section>
+        </div>
 
-        <section class="right">
-          <div class="seal">Serve<br />Uplift<br />Protect</div>
-          <div class="right-copy">
-            <p class="eyebrow" style="color: rgba(255, 244, 231, 0.72)">Live website</p>
-            <h2>For donors, volunteers, families, and aspirants.</h2>
-            <p>
-              A modern bilingual trust website designed for outreach,
-              transparency, and meaningful public connection.
-            </p>
+        <p class="eyebrow">Kallakurichi, Tamil Nadu | Public Trust Website</p>
+        <h1>A public trust for education, dignity, and local care.</h1>
+        <p class="lead">
+          A more professional bilingual website for students, aspirants, families, volunteers, and supporters across Tamil Nadu.
+        </p>
+
+        <div class="signals">
+          <div class="signal">
+            <strong>Education-led</strong>
+            <span>Student support, TNPSC guidance, and mentorship</span>
           </div>
-          <div class="metrics">
-            <div class="metric">
-              <strong>Programs</strong>
-              <span>Education and welfare pathways</span>
-            </div>
-            <div class="metric">
-              <strong>Contact</strong>
-              <span>Email-backed enquiry forms</span>
-            </div>
-            <div class="metric">
-              <strong>Launch</strong>
-              <span>GitHub Pages public release</span>
-            </div>
+          <div class="signal">
+            <strong>Direct access</strong>
+            <span>Visible local contact and privacy-first support</span>
           </div>
-          <div class="glow"></div>
-        </section>
-      </div>
+          <div class="signal">
+            <strong>Tamil + English</strong>
+            <span>Bilingual access built for public clarity</span>
+          </div>
+        </div>
+      </section>
+
+      <aside class="aside">
+        <div class="emblem-card">
+          <img src="hero-emblem.svg" alt="Sadayappan Welfare Trust emblem" />
+        </div>
+        <div class="note">
+          <p>Launch upgrades</p>
+          <ul>
+            <li>Elegant civic visual language</li>
+            <li>Cleaner hierarchy across all pages</li>
+            <li>Secure direct-contact experience</li>
+          </ul>
+        </div>
+      </aside>
     </div>
   </body>
 </html>
