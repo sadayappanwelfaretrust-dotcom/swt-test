@@ -13,7 +13,7 @@
     <meta name="referrer" content="strict-origin-when-cross-origin" />
     <meta
       http-equiv="Content-Security-Policy"
-      content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; font-src 'self'; connect-src 'none'; object-src 'none'; media-src 'self'; frame-src 'none'; frame-ancestors 'none'; form-action 'self' mailto:; base-uri 'self'; manifest-src 'self'; upgrade-insecure-requests"
+      content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; font-src 'self'; connect-src 'none'; object-src 'none'; media-src 'self'; frame-src 'none'; frame-ancestors 'none'; form-action 'self' https://formsubmit.co; base-uri 'self'; manifest-src 'self'; upgrade-insecure-requests"
     />
     <title>Contact | Sadayappan Welfare Trust</title>
     <link rel="canonical" href="https://sadayappanwelfaretrust.com/contact.html" />
@@ -120,7 +120,7 @@
             <article class="reveal">
               <strong class="lang-en">Email</strong>
               <strong class="lang-ta">மின்னஞ்சல்</strong>
-              <p><a href="mailto:ssadayap@gmail.com">ssadayap@gmail.com</a></p>
+              <p><a href="mailto:sadayappanwelfaretrust@gmail.com">sadayappanwelfaretrust@gmail.com</a></p>
             </article>
             <article class="reveal">
               <strong class="lang-en">Address</strong>
@@ -135,13 +135,13 @@
         <div class="container form-grid">
           <aside class="form-side reveal">
             <p class="eyebrow"><span class="lang-en">Prepare your enquiry</span><span class="lang-ta">உங்கள் தகவலைத் தயாரிக்கவும்</span></p>
-            <h2 class="lang-en">Write once, send directly from your own mail app.</h2>
-            <h2 class="lang-ta">ஒருமுறை எழுதுங்கள், உங்கள் மின்னஞ்சல் செயலியிலிருந்து நேரடியாக அனுப்புங்கள்.</h2>
+            <h2 class="lang-en">Write once and send a secure enquiry instantly.</h2>
+            <h2 class="lang-ta">ஒருமுறை எழுதுங்கள், பாதுகாப்பான தொடர்பு தகவலை நேரடியாக அனுப்புங்கள்.</h2>
             <p class="lead lang-en">
-              This page does not send your message through a third-party form handler. It prepares a direct email so you stay in control of what is sent.
+              This page sends your message through a protected form workflow with spam filtering and direct delivery to the trust inbox.
             </p>
             <p class="lead lang-ta">
-              இந்தப் பக்கம் உங்கள் செய்தியை மூன்றாம் தரப்பு படிவ சேவைக்கு அனுப்புவதில்லை. அது நேரடி மின்னஞ்சலைத் தயாரிப்பதால் என்ன அனுப்பப்படுகிறது என்பது உங்கள் கட்டுப்பாட்டிலேயே இருக்கும்.
+              இந்தப் பக்கம் ஸ்பாம் பாதுகாப்புடன் கூடிய பாதுகாப்பான படிவ வழியாக உங்கள் செய்தியை அறக்கட்டளையின் மின்னஞ்சல் பெட்டிக்கு நேரடியாக அனுப்புகிறது.
             </p>
 
             <div class="support-rail">
@@ -162,15 +162,25 @@
 
           <div class="form-shell reveal">
             <form
-              data-mailto-form
-              data-mailto-to="ssadayap@gmail.com"
-              data-mailto-subject-en="Sadayappan Welfare Trust - Contact enquiry"
-              data-mailto-subject-ta="சதயப்பன் வெல்பேர் டிரஸ்ட் - தொடர்பு தகவல்"
-              data-mailto-intro-en="Hello, I would like to contact Sadayappan Welfare Trust."
-              data-mailto-intro-ta="வணக்கம், சதயப்பன் வெல்பேர் டிரஸ்டை தொடர்பு கொள்ள விரும்புகிறேன்."
-              data-mailto-outro-en="Please get in touch with me when convenient."
-              data-mailto-outro-ta="சாத்தியமான நேரத்தில் தயவுசெய்து என்னைத் தொடர்பு கொள்ளுங்கள்."
+              action="https://formsubmit.co/sadayappanwelfaretrust@gmail.com"
+              method="POST"
+              accept-charset="UTF-8"
+              data-formsubmit-form
+              data-form-type="contact enquiry"
+              data-form-subject-en="Sadayappan Welfare Trust - Contact enquiry"
+              data-form-subject-ta="சதயப்பன் வெல்பேர் டிரஸ்ட் - தொடர்பு தகவல்"
+              data-autoresponse-en="Thank you for contacting Sadayappan Welfare Trust. Your enquiry has been received and the trust will respond soon."
+              data-autoresponse-ta="சதயப்பன் வெல்பேர் டிரஸ்டை தொடர்பு கொண்டதற்கு நன்றி. உங்கள் தகவல் கிடைத்துள்ளது; அறக்கட்டளை விரைவில் பதிலளிக்கும்."
             >
+              <input type="hidden" name="_subject" value="Sadayappan Welfare Trust - Contact enquiry" />
+              <input type="hidden" name="_next" value="https://sadayappanwelfaretrust-dotcom.github.io/swt-test/thanks.html" />
+              <input type="hidden" name="_template" value="table" />
+              <input type="hidden" name="_autoresponse" value="Thank you for contacting Sadayappan Welfare Trust. Your enquiry has been received and the trust will respond soon." />
+              <input type="hidden" name="_blacklist" value="viagra,cialis,casino,poker,escort,porn" />
+              <input type="hidden" name="form_type" value="contact enquiry" />
+              <input type="hidden" name="source_page" value="https://sadayappanwelfaretrust-dotcom.github.io/swt-test/contact.html" />
+              <input type="hidden" name="submitted_language" value="en" />
+              <input type="text" name="_honey" tabindex="-1" autocomplete="off" style="display: none" />
               <div class="field-grid">
                 <div class="field">
                   <label for="contact-name"><span class="lang-en">Full name</span><span class="lang-ta">முழு பெயர்</span></label>
@@ -212,13 +222,13 @@
                 </div>
               </div>
 
-              <p class="form-note lang-en">Submitting this form opens your email app with the message prepared. No outside form relay is used.</p>
-              <p class="form-note lang-ta">இந்தப் படிவத்தை சமர்ப்பித்தால் உங்கள் மின்னஞ்சல் செயலி தயார் செய்தியுடன் திறக்கும். வெளிப்புற படிவ மாற்று சேவை பயன்படுத்தப்படவில்லை.</p>
+              <p class="form-note lang-en">Submitting this form sends a secure email enquiry with spam filtering and built-in reCAPTCHA protection.</p>
+              <p class="form-note lang-ta">இந்தப் படிவத்தை சமர்ப்பிக்கும்போது ஸ்பாம் வடிகட்டல் மற்றும் reCAPTCHA பாதுகாப்புடன் கூடிய பாதுகாப்பான மின்னஞ்சல் தகவல் அனுப்பப்படும்.</p>
 
               <div class="form-actions">
                 <button class="button button-primary" type="submit">
-                  <span class="lang-en">Prepare direct email</span>
-                  <span class="lang-ta">நேரடி மின்னஞ்சலைத் தயாரிக்க</span>
+                  <span class="lang-en">Send enquiry securely</span>
+                  <span class="lang-ta">தகவலை பாதுகாப்பாக அனுப்பும்</span>
                 </button>
                 <p class="status-message" data-form-status aria-live="polite" hidden></p>
               </div>
@@ -249,10 +259,10 @@
               <p class="lang-ta">ஆம். படிவத்தில் குறிப்பிடவும், உங்கள் தொலைபேசி எண்ணை தெளிவாக எழுதவும்.</p>
             </article>
             <article class="contact-column reveal">
-              <h3 class="lang-en">Why no external contact form service?</h3>
-              <h3 class="lang-ta">ஏன் வெளிப்புற தொடர்புப் படிவ சேவை இல்லை?</h3>
-              <p class="lang-en">This relaunch reduces third-party handling so public contact stays simpler and more private.</p>
-              <p class="lang-ta">மூன்றாம் தரப்பு கையாளுதலைக் குறைப்பதன் மூலம் பொதுத் தொடர்பு எளிமையாகவும் தனியுரிமை மிக்கதாகவும் இருக்கும்.</p>
+              <h3 class="lang-en">How are submissions protected?</h3>
+              <h3 class="lang-ta">சமர்ப்பிப்புகள் எவ்வாறு பாதுகாக்கப்படுகின்றன?</h3>
+              <p class="lang-en">The form keeps reCAPTCHA enabled, includes a honeypot field, and sends the enquiry directly to the trust inbox.</p>
+              <p class="lang-ta">இந்தப் படிவம் reCAPTCHA பாதுகாப்பை செயல்படுத்தி, honeypot புலத்தை கொண்டிருக்கிறது, மேலும் தகவலை அறக்கட்டளையின் மின்னஞ்சல் பெட்டிக்கு நேரடியாக அனுப்புகிறது.</p>
             </article>
           </div>
         </div>
@@ -279,7 +289,7 @@
           <strong><span class="lang-en">Contact</span><span class="lang-ta">தொடர்பு</span></strong>
           <p>Balaji Nagar, Kottai Medu, Kallakurichi - 606202, Tamil Nadu</p>
           <p><a href="tel:+917406296649">+91 74062 96649</a></p>
-          <p><a href="mailto:ssadayap@gmail.com">ssadayap@gmail.com</a></p>
+          <p><a href="mailto:sadayappanwelfaretrust@gmail.com">sadayappanwelfaretrust@gmail.com</a></p>
         </div>
         <p class="footer-copy"><span data-year></span> Sadayappan Welfare Trust. All rights reserved.</p>
       </div>

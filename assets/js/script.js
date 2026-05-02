@@ -6,23 +6,16 @@ const navLinks = siteNav ? Array.from(siteNav.querySelectorAll("a")) : [];
 const langButtons = Array.from(document.querySelectorAll("[data-set-lang]"));
 const revealItems = Array.from(document.querySelectorAll(".reveal"));
 const yearNodes = Array.from(document.querySelectorAll("[data-year]"));
-const forms = Array.from(document.querySelectorAll("[data-mailto-form]"));
+const forms = Array.from(document.querySelectorAll("[data-formsubmit-form]"));
 const LANGUAGE_KEY = "swt-language";
 
 const languageMessages = {
   en: {
-    opening: "Opening your email app...",
-    success:
-      "Your email app should open with the message prepared. If it does not, email ssadayap@gmail.com or call +91 74062 96649.",
-    error:
-      "We could not open your email app. Please email ssadayap@gmail.com or call +91 74062 96649.",
+    opening: "Sending your enquiry securely...",
   },
   ta: {
-    opening: "உங்கள் மின்னஞ்சல் செயலியைத் திறக்கிறோம்...",
-    success:
-      "தயார் செய்யப்பட்ட செய்தியுடன் உங்கள் மின்னஞ்சல் செயலி திறக்க வேண்டும். அது திறக்கவில்லை என்றால் ssadayap@gmail.com க்கு மின்னஞ்சல் அனுப்பவும் அல்லது +91 74062 96649 என்ற எண்ணுக்கு அழைக்கவும்.",
-    error:
-      "உங்கள் மின்னஞ்சல் செயலியைத் திறக்க முடியவில்லை. தயவுசெய்து ssadayap@gmail.com க்கு மின்னஞ்சல் அனுப்பவும் அல்லது +91 74062 96649 என்ற எண்ணுக்கு அழைக்கவும்.",
+    opening:
+      "\u0b89\u0b99\u0bcd\u0b95\u0bb3\u0bcd \u0ba4\u0b95\u0bb5\u0bb2\u0bcd \u0baa\u0bbe\u0ba4\u0bc1\u0b95\u0bbe\u0baa\u0bcd\u0baa\u0bbe\u0b95 \u0b85\u0ba9\u0bc1\u0baa\u0bcd\u0baa\u0baa\u0bcd\u0baa\u0b9f\u0bc1\u0b95\u0bbf\u0bb1\u0ba4\u0bc1...",
   },
 };
 
@@ -114,94 +107,55 @@ function setupRevealAnimations() {
   revealItems.forEach((item) => observer.observe(item));
 }
 
-function getFieldLabel(field, language) {
-  if (language === "ta" && field.dataset.labelTa) {
-    return field.dataset.labelTa;
-  }
-
-  return field.dataset.labelEn || field.name || "";
-}
-
-function getFieldValue(field) {
-  if (field.tagName === "SELECT") {
-    const option = field.options[field.selectedIndex];
-    return option ? option.text.trim() : "";
-  }
-
-  return field.value.trim();
-}
-
-function buildMailBody(form, language) {
-  const intro =
-    language === "ta" ? form.dataset.mailtoIntroTa || "" : form.dataset.mailtoIntroEn || "";
-  const outro =
-    language === "ta" ? form.dataset.mailtoOutroTa || "" : form.dataset.mailtoOutroEn || "";
-  const lines = [];
-
-  if (intro) {
-    lines.push(intro, "");
-  }
-
-  const fields = Array.from(form.querySelectorAll("input, select, textarea")).filter((field) => {
-    if (!(field instanceof HTMLElement)) {
-      return false;
-    }
-
-    if (!("name" in field) || !field.name || field.disabled) {
-      return false;
-    }
-
-    const type = "type" in field ? field.type : "";
-    if (type === "hidden" || type === "submit" || type === "button" || type === "reset") {
-      return false;
-    }
-
-    if ((type === "checkbox" || type === "radio") && !field.checked) {
-      return false;
-    }
-
-    return true;
-  });
-
-  fields.forEach((field) => {
-    const value = getFieldValue(field);
-    if (!value) {
-      return;
-    }
-
-    lines.push(`${getFieldLabel(field, language)}: ${value}`);
-  });
-
-  if (outro) {
-    lines.push("", outro);
-  }
-
-  return lines.join("\n");
-}
-
-function setupMailtoForms() {
+function setupManagedForms() {
   forms.forEach((form) => {
     const statusNode = form.querySelector("[data-form-status]");
     const submitButton = form.querySelector('button[type="submit"]');
+    const subjectNode = form.querySelector('input[name="_subject"]');
+    const nextNode = form.querySelector('input[name="_next"]');
+    const autoresponseNode = form.querySelector('input[name="_autoresponse"]');
+    const sourceNode = form.querySelector('input[name="source_page"]');
+    const languageNode = form.querySelector('input[name="submitted_language"]');
+    const formTypeNode = form.querySelector('input[name="form_type"]');
 
     form.addEventListener("submit", (event) => {
-      event.preventDefault();
-
       if (!form.reportValidity()) {
+        event.preventDefault();
         return;
       }
 
       const language = getLanguage();
       const messages = languageMessages[language];
-      const recipient = form.dataset.mailtoTo || "ssadayap@gmail.com";
-      const subject =
-        language === "ta"
-          ? form.dataset.mailtoSubjectTa || form.dataset.mailtoSubjectEn || "Sadayappan Welfare Trust"
-          : form.dataset.mailtoSubjectEn || "Sadayappan Welfare Trust";
-      const bodyText = buildMailBody(form, language);
-      const mailtoUrl = `mailto:${encodeURIComponent(recipient)}?subject=${encodeURIComponent(
-        subject
-      )}&body=${encodeURIComponent(bodyText)}`;
+
+      if (subjectNode) {
+        subjectNode.value =
+          language === "ta"
+            ? form.dataset.formSubjectTa || form.dataset.formSubjectEn || "Sadayappan Welfare Trust"
+            : form.dataset.formSubjectEn || "Sadayappan Welfare Trust";
+      }
+
+      if (autoresponseNode) {
+        autoresponseNode.value =
+          language === "ta"
+            ? form.dataset.autoresponseTa || form.dataset.autoresponseEn || ""
+            : form.dataset.autoresponseEn || "";
+      }
+
+      if (nextNode) {
+        nextNode.value = new URL("thanks.html", window.location.href).toString();
+      }
+
+      if (sourceNode) {
+        sourceNode.value = window.location.href;
+      }
+
+      if (languageNode) {
+        languageNode.value = language;
+      }
+
+      if (formTypeNode) {
+        formTypeNode.value = form.dataset.formType || "";
+      }
 
       if (statusNode) {
         statusNode.hidden = false;
@@ -211,28 +165,7 @@ function setupMailtoForms() {
 
       if (submitButton) {
         submitButton.disabled = true;
-      }
-
-      try {
-        window.location.href = mailtoUrl;
-
-        if (statusNode) {
-          statusNode.hidden = false;
-          statusNode.dataset.state = "success";
-          statusNode.textContent = messages.success;
-        }
-      } catch {
-        if (statusNode) {
-          statusNode.hidden = false;
-          statusNode.dataset.state = "error";
-          statusNode.textContent = messages.error;
-        }
-      } finally {
-        window.setTimeout(() => {
-          if (submitButton) {
-            submitButton.disabled = false;
-          }
-        }, 350);
+        submitButton.setAttribute("aria-disabled", "true");
       }
     });
   });
@@ -263,7 +196,7 @@ yearNodes.forEach((node) => {
 setupLanguageControls();
 setupNavigation();
 setupRevealAnimations();
-setupMailtoForms();
+setupManagedForms();
 syncHeaderState();
 
 window.addEventListener("scroll", syncHeaderState, { passive: true });

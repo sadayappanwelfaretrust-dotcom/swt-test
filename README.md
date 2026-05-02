@@ -14,6 +14,7 @@ Static bilingual website for Sadayappan Welfare Trust.
 - `programs.html` - program overview
 - `donate.html` - donation enquiry page
 - `contact.html` - contact and volunteer enquiry page
+- `thanks.html` - confirmation page after a successful form submission
 - `assets/css/styles.css` - shared styles
 - `assets/js/script.js` - shared interactions
 - `assets/images/social-preview.png` - social sharing preview image
@@ -76,14 +77,14 @@ Because the site uses relative links, it works for both:
 
 ## Forms
 
-The donation and contact forms currently use FormSubmit:
+The donation and contact forms now submit automatically through FormSubmit's standard hosted backend:
 
-- `https://formsubmit.co/ssadayap@gmail.com`
-- `https://formsubmit.co/ajax/ssadayap@gmail.com`
+- `https://formsubmit.co/sadayappanwelfaretrust@gmail.com`
 
-Before going live:
+Production notes:
 
-1. Submit one test form.
-2. Complete the FormSubmit email activation if prompted.
-3. Replace the destination email if the trust wants submissions sent elsewhere.
-4. If you later get Razorpay, UPI QR, or bank details, the donation page can be upgraded to direct payment collection.
+1. The site keeps FormSubmit reCAPTCHA enabled by default.
+2. Both forms include a honeypot field and basic spam blacklist phrases.
+3. Successful submissions return visitors to `thanks.html`.
+4. If FormSubmit has not already been activated for this inbox, the first real submission may trigger an activation email.
+5. If you later move to your own backend or a platform like Netlify/Vercel with server functions, the forms can be upgraded again without redesigning the pages.

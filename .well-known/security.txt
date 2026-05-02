@@ -1,4 +1,4 @@
-Contact: mailto:ssadayap@gmail.com
+Contact: mailto:sadayappanwelfaretrust@gmail.com
 Contact: tel:+917406296649
 Canonical: https://sadayappanwelfaretrust.com/.well-known/security.txt
 Preferred-Languages: en, ta
